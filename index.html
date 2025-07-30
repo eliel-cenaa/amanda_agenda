@@ -6,17 +6,12 @@
     <title>amandahairbc</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="amanda.css">
-    <style>
-        body {
-            background-color: #ffffff; /* Cor de fundo branco */
-        }
-    </style>
 </head>
 <body>
     <div class="container py-4">
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
-                <h1 class="display-5 fw-bold text-uppercase" style="color:#daa520;">Alisamento orgânico personalizado</h1>
+                <h1 class="display-5 fw-bold text-uppercase">Alisamento orgânico personalizado</h1>
                 <p class="lead">Te entrego um liso perfeito, saudável e com brilho, que te traz praticidade no dia a dia.
                 Especialista em alisamento premium em Balneário Camboriú, de alto padrão.</p>
                 <ul>
@@ -32,30 +27,56 @@
         <hr>
         <div class="row mb-4">
             <div class="col-12 text-center">
-                <h2 class="fw-bold" style="color:#daa520;">Veja o resultado dos nossos procedimentos</h2>
+                <h2 class="fw-bold">Veja o resultado dos nossos procedimentos</h2>
             </div>
         </div>
-        <div class="row g-4 mb-5">
-            <div class="col-md-4 col-12">
-                <img src="img/cabelo.jpeg" alt="Cabelo liso resultado 1" class="galeria-img">
-            </div>
-            <div class="col-md-4 col-12">
-                <img src="img/foto.jpeg" alt="Cabelo liso resultado 2" class="galeria-img">
-            </div>
-            <div class="col-md-4 col-12">
-                <img src="img/fotocabelo.jpeg" alt="Cabelo liso resultado 3" class="galeria-img">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div id="carouselProcedimentos" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center">
+                                <img src="img/cabelo.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 1">
+                                <img src="img/foto.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 2">
+                                <img src="img/fotocabelo.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 3">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <img src="img/fotocabelo.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 3">
+                                <img src="img/cabelo.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 1">
+                                <img src="img/foto.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 2">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProcedimentos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProcedimentos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="fw-bold" style="color:#daa520;">Transforme sua autoestima com um liso espelhado!</h3>
+                <h3 class="fw-bold">Transforme sua autoestima com um liso espelhado!</h3>
                 <p>Faça seu orçamento e agendamento pelo WhatsApp.<br> </p>
             </div>
         </div>
     </div>
-    <a href="https://wa.me/5547997430588?text=Quero%20agendar%20um%20alisamento%20sem%20formol!" class="btn btn-whatsapp" target="_blank" style="color:#daa520;">
-        💖 Agende seu liso sem formol agora!
+    <a href="https://wa.me/5547997430588?text=Quero%20agendar%20um%20alisamento%20sem%20formol!" class="btn btn-whatsapp" target="_blank">
+        💖 Agende seu horário agora!
     </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carouselProcedimentos = document.querySelector('#carouselProcedimentos');
+        const carousel = new bootstrap.Carousel(carouselProcedimentos, {
+            interval: 4000, // 4 segundos
+            ride: 'carousel'
+        });
+    </script>
 </body>
 </html>
