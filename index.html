@@ -36,10 +36,30 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <img src="img/fotocabelo.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo liso resultado 3">
-                                <img src="img/cabelo amandaa 2.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo amanda 2 alternativo">
-                                <img src="img/cabeloamanda3.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo amanda 3">
-                                <img src="img/cabeloamanda4.jpeg" class="d-block w-25 mx-2 banner-img" alt="Cabelo amanda 4">
+                                <div class="card border-0 mx-2" style="width: 300px;">
+                                    <img src="img/fotocabelo.jpeg" class="card-img-top" alt="Cabelo liso resultado 3" style="height: 400px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="card border-0 mx-2" style="width: 300px;">
+                                    <img src="img/cabelo amandaa 2.jpeg" class="card-img-top" alt="Cabelo amanda 2 alternativo" style="height: 400px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="card border-0 mx-2" style="width: 300px;">
+                                    <img src="img/cabeloamanda3.jpeg" class="card-img-top" alt="Cabelo amanda 3" style="height: 400px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="card border-0 mx-2" style="width: 300px;">
+                                    <img src="img/cabeloamanda4.jpeg" class="card-img-top" alt="Cabelo amanda 4" style="height: 400px; object-fit: cover;">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,7 +71,31 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                    <!-- Indicadores de navegação -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProcedimentos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselProcedimentos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselProcedimentos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselProcedimentos" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
                 </div>
+                
+                <style>
+                    .card {
+                        transition: transform 0.3s ease;
+                    }
+                    .card:hover {
+                        transform: scale(1.05);
+                    }
+                    @media (max-width: 768px) {
+                        .card {
+                            width: 200px !important;
+                        }
+                        .card img {
+                            height: 300px !important;
+                        }
+                    }
+                </style>
             </div>
         </div>
         <div class="row">
