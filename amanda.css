@@ -1,5 +1,12 @@
-body {
-    background: #fff0f6;
+.logo{
+    height: 200px;
+    
+}
+.logo-conteiner{
+      text-align: center; 
+}
+.larg {
+    max-height: 500px;
 }
 
 .btn-whatsapp {
@@ -13,7 +20,7 @@ body {
     font-weight: bold;
     font-size: 1.2rem;
     padding: 16px 32px;
-    box-shadow: 0 4px 16px rgba(255,105,180,0.2);
+    box-shadow: 0 4px 16px rgba(255, 105, 180, 0.2);
     transition: transform 0.2s;
     background-color: #ffffff;
     color: #daa520;
@@ -32,10 +39,11 @@ body {
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(255,105,180,0.15);
+    box-shadow: 0 4px 24px rgba(255, 105, 180, 0.15);
 }
 
-.display-5, .fw-bold {
+.display-5,
+.fw-bold {
     color: #daa520;
 }
 
@@ -71,21 +79,21 @@ body {
     height: 400px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Tablet: Show 2 items */
 @media (max-width: 991px) {
-  .custom-carousel-card {
-    flex-basis: 50%;
-  }
+    .custom-carousel-card {
+        flex-basis: 50%;
+    }
 }
 
 /* Mobile: Show 1 item */
 @media (max-width: 767px) {
-  .custom-carousel-card {
-    flex-basis: 100%;
-  }
+    .custom-carousel-card {
+        flex-basis: 100%;
+    }
 }
 
 .custom-carousel-button {
@@ -117,7 +125,8 @@ body {
 }
 
 /* Use Bootstrap icons but keep them decoupled */
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     filter: invert(1) grayscale(100) sepia(1) hue-rotate(280deg) saturate(5);
 }
 
