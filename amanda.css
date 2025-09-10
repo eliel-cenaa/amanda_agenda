@@ -78,8 +78,8 @@
 
 .custom-carousel-card img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 450px;
+    object-fit: fill;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -155,4 +155,12 @@
 
 .instagram-link .bi-instagram {
     margin-right: 10px;
+}
+.video-container {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(255, 105, 180, 0.15);
+    margin-bottom: 20px;
 }

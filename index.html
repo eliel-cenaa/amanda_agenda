@@ -45,6 +45,16 @@
                 <h2 class="fw-bold">Veja o resultado dos nossos procedimentos</h2>
             </div>
         </div>
+        <div>
+            <video 
+                src="img/videocabelo.MOV" 
+                autoplay 
+                muted 
+                loop 
+                class="video-container">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
         <!-- Custom Carousel -->
         <div class="custom-carousel-container">
             <div class="custom-carousel-track-container">
@@ -52,22 +62,16 @@
                     <div class="custom-carousel-card">
                         <img src="img/cabelo amandaa 2.jpeg" alt="Cabelo amanda 2 alternativo">
                     </div>
+
                     <div class="custom-carousel-card">
                         <img src="img/cabeloamanda1.jpeg" alt="Cabelo amanda 3">
                     </div>
-                    <div class="custom-carousel-card">
-                        <img src="img/cabeloamanda4.jpeg" alt="Cabelo amanda 4">
-                    </div>
+
                     <div class="custom-carousel-card">
                         <img src="img/cabeloamanda3.jpeg" alt="Cabelo amanda 3">
                 </div>
             </div>
-            <button class="custom-carousel-button prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="custom-carousel-button next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+           
         </div>
         <!--butao-->
         <div class="container py-4">
@@ -93,8 +97,7 @@
         const track = document.querySelector('.custom-carousel-track');
         if (!track) return;
 
-        const nextButton = document.querySelector('.custom-carousel-button.next');
-        const prevButton = document.querySelector('.custom-carousel-button.prev');
+    
         const cards = Array.from(track.children);
         const cardCount = cards.length;
         let currentIndex = 0;
@@ -139,8 +142,6 @@
             }
         }
 
-        nextButton.addEventListener('click', showNext);
-        prevButton.addEventListener('click', showPrev);
 
         // Autoplay
         setInterval(showNext, 4000);
