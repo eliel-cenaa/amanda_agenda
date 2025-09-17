@@ -56,24 +56,24 @@
             <div class="custom-carousel-track-container">
                 <div class="custom-carousel-track">
                     <div class="custom-carousel-card">
-                        <video src="img/cabeloo.mp4" autoplay muted loop class="video-container">
+                        <video src="img/cabeloo.mp4" autoplay muted playsinline loop class="video-container">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                     </div>
 
                     <div class="custom-carousel-card">
-                        <video src="img/videocc.mp4"  autoplay muted loop class="video-container">
+                        <video src="img/videocc.mp4"  autoplay muted playsinline loop class="video-container">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                     </div>
 
                     <div class="custom-carousel-card">
-                        <video src="img/video cabelo.mp4" autoplay muted loop class="video-container">
+                        <video src="img/video cabelo.mp4" autoplay muted playsinline loop class="video-container">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                     </div>
                     <div class="custom-carousel-card">
-                        <video src="img/videoo.mp4" autoplay muted loop class="video-container">
+                        <video src="img/videoo.mp4" autoplay muted playsinline loop class="video-container">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                 </div>
@@ -126,6 +126,12 @@
                 }
 
                 function showNext() {
+                    const oldCard = track.children[currentIndex];
+                    const oldVideo = oldCard.querySelector('video');
+                    if (oldVideo) {
+                        oldVideo.pause();
+                    }
+
                     currentIndex++;
                     updateCarousel();
 
@@ -134,24 +140,22 @@
                         setTimeout(() => {
                             currentIndex = 0;
                             updateCarousel(false); // Jump without animation
+                            playCurrentVideo();
                         }, 500); // Must match the CSS transition duration
-                    }
-                }
-
-                function showPrev() {
-                    if (currentIndex === 0) {
-                        currentIndex = cardCount;
-                        updateCarousel(false); // Jump to the end of the cloned list
-                        setTimeout(() => {
-                            currentIndex--;
-                            updateCarousel(true);
-                        }, 20);
                     } else {
-                        currentIndex--;
-                        updateCarousel();
+                        playCurrentVideo();
                     }
                 }
 
+                function playCurrentVideo() {
+                    const currentCard = track.children[currentIndex];
+                    const currentVideo = currentCard.querySelector('video');
+                    if (currentVideo) {
+                        currentVideo.play().catch(error => {
+                            console.log("Video autoplay was prevented:", error);
+                        });
+                    }
+                }
 
                 // Autoplay
                 setInterval(showNext, 4000);
@@ -160,6 +164,9 @@
                 window.addEventListener('resize', () => {
                     updateCarousel(false);
                 });
+
+                // Start the first video
+                playCurrentVideo();
             });
         </script>
 </body>
